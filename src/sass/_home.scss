@@ -1,0 +1,83 @@
+body {
+    background-color: #fff;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    width: 20em;
+    margin: 1em;
+    padding: 0.5em;
+    min-height: 1.5em;
+    border: .05em solid $color-text;
+    border-radius: .25em;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    &:focus {
+        border-color: $color-focus; 
+    }
+}
+
+.value {
+    flex-grow: 1;
+}
+
+.btn-clear {
+    background: none;
+    color: $color-text;
+    border: none;
+    outline: none;
+    font-size: 1.25em;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        color: $color-hover;
+    }
+}
+
+.divider {
+    background-color: $color-text;
+    width: 0.05em;
+    align-self: stretch;
+}
+
+.caret {
+    translate: 0 25%;
+    border: .25em solid transparent;
+    border-top-color: $color-text;
+}
+
+.options {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.25em);
+    display: none;
+    width: 100%;
+    max-width: 15em;
+    overflow-y: auto;
+    border: .05em solid $color-text;
+    border-radius: .25em;
+    z-index: 100;
+
+    &.show {
+        display: block;
+    }
+}
+
+.option {
+    padding: .25em .5em;
+    cursor: pointer;
+
+    &.hightlighted {
+        background-color: $color-focus; 
+        color: $color-bg;
+    }
+
+    &.selected {
+        background-color: $color-focus; 
+    }
+}
