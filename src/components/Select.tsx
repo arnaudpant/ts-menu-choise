@@ -33,7 +33,8 @@ const Select = ({value, onChange, options}: SelectProp) => {
             <span className="value">{value?.label}</span>
             <button className="btn-clear" onClick={(e) => {
                 e.stopPropagation()
-                clearOption()}}>&times;</button>
+                clearOption()
+                }}>&times;</button>
             <div className="divider"></div>
             <div className="caret"></div>
             <ul className={isOpen ? "options show" : "options"}>
