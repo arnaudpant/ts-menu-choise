@@ -22,6 +22,9 @@ body {
 }
 
 .value {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
     flex-grow: 1;
 }
 
@@ -70,14 +73,37 @@ body {
 
 .option {
     padding: .25em .5em;
+    background-color: $color-bg;
     cursor: pointer;
-
-    &.hightlighted {
-        background-color: $color-focus; 
-        color: $color-bg;
-    }
 
     &.selected {
         background-color: $color-focus; 
     }
+    
+    &.hightlighted {
+        background-color: $color-focus-hover; 
+        color: $color-bg;
+    }
+}
+
+.option-badge {
+    display: flex;
+    align-items: center;
+    padding: 0.15em .25em;
+    border: .05em solid $color-text;
+    border-radius: .25em;
+    gap: .25em;
+    cursor: pointer;
+    background: none;
+    outline: none;
+
+    &:focus,
+    &:hover {
+        background-color: $color-focus-hover;
+    }
+}
+
+.option-badge > .remove-btn {
+    color: $color-text;
+    font-size: 1.5em;
 }
